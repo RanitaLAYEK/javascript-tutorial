@@ -52,6 +52,8 @@ console.log(arr1);
 
 1.cammelCase:---
 2.kebbab-case:---
+3.snake_case:---
+4.PascalCase:---
 
 fomat check
 

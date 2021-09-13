@@ -1,0 +1,12 @@
+console.time('your time took');
+console.log('Hello');
+console.log(3+34);
+console.log(true);
+console.log([2,3,4,7,8]);
+console.log({harry:'this',marks:34});
+console.table({harry: 'this',marks:34});
+console.warn('this is a warning');
+console.timeEnd('your time took');
+//console.clear();
+//console.assert(age>180,'age > 180 not possible');
+console.error('this is an error');
