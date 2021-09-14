@@ -36,7 +36,7 @@ for(i=0;i<arr.length;i++){
 
 //Foreach
 
-arr.forEach(function(element){
+arr.forEach(function(element,index,array){
 console.log(element)
 })
 
