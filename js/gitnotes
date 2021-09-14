@@ -1,0 +1,132 @@
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   js/tut10.js
+
+PS F:\javascript> git add js/tut10.js
+PS F:\javascript> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   index.html
+        new file:   js/gitnotes
+        new file:   js/tut10.js
+        new file:   js/tut9.js
+
+PS F:\javascript> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   index.html
+        new file:   js/gitnotes
+        new file:   js/tut10.js
+        new file:   js/tut9.js
+
+PS F:\javascript> git commit -m "Function loop"
+[main 12e7390] Function loop
+ 4 files changed, 189 insertions(+)
+ create mode 100644 index.html
+ create mode 100644 js/gitnotes
+ create mode 100644 js/tut10.js
+ create mode 100644 js/tut9.js
+PS F:\javascript> git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+        modified:   js/tut10.js
+        modified:   js/tut9.js
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        js/tut11.js
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS F:\javascript> git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+        modified:   js/tut10.js
+        modified:   js/tut9.js
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        js/tut11.js
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS F:\javascript> git branch
+* main
+  master
+PS F:\javascript> git checkout master
+error: Your local changes to the following files would be overwritten by checkout:
+        index.html
+        js/tut10.js
+Please commit your changes or stash them before you switch branches.
+Aborting
+PS F:\javascript> git stash
+Saved working directory and index state WIP on main: 12e7390 Function loop
+PS F:\javascript> git checkout master
+Switched to branch 'master'
+PS F:\javascript> git stash pop
+CONFLICT (modify/delete): js/tut10.js deleted in Updated upstream and modified in Stashed changes. Version Stashed changes of
+js/tut10.js left in tree.
+Auto-merging index.html
+CONFLICT (content): Merge conflict in index.html
+The stash entry is kept in case you need it again.
+PS F:\javascript>
+PS F:\javascript> git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   js/tut9.js
+
+Unmerged paths:
+  (use "git restore --staged <file>..." to unstage)
+  (use "git add/rm <file>..." as appropriate to mark resolution)
+        both modified:   index.html
+        deleted by us:   js/tut10.js
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        js/tut11.js
+
+PS F:\javascript> git add  js/tut10.js
+PS F:\javascript> git add index.html
+PS F:\javascript> git add tut11.js
+fatal: pathspec 'tut11.js' did not match any files
+PS F:\javascript> git add js/tut11.js
+PS F:\javascript> git commit -m "tut10 & tut11"
+[master db957c7] tut10 & tut11
+ 4 files changed, 78 insertions(+), 1 deletion(-)
+ create mode 100644 js/tut10.js
+ create mode 100644 js/tut11.js
+PS F:\javascript> git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+PS F:\javascript> git push origin master
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 1.18 KiB | 150.00 KiB/s, done.
+Total 7 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To github.com:RanitaLAYEK/javascript-tutorial.git
+   8df7b80..db957c7  master -> master
