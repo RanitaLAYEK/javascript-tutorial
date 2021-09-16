@@ -19,4 +19,14 @@ car.innerHTML='<b>Welcome to new episode</b>'
 //QUERYSELECTOR.
 let sell=document.querySelector('#myfirst');
 sell=document.querySelector('.child');
+sell=document.querySelector('b'); //b tag is o/p
 console.log(sell);
+//Multi queryselector
+let buy=document.getElementsByClassName('child');
+console.log(buy[0]);
+
+//HTML COLLECTION ALTERATE
+Array.from(buy).forEach(element =>{
+    console.log(buy);
+    element.style.color='blue';
+    });
