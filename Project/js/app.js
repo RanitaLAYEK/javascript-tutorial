@@ -47,4 +47,8 @@ function shownotes(){
       } else {
         notesObj = JSON.parse(notes);
       }
+      let Html='';
+      Array.forEach(function(element,index){
+
+      });
 }
