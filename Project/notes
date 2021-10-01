@@ -1,0 +1,14 @@
+ <div class="notecard my-2 mx-2 card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Note 2</h5>
+                    <a href="#" class="btn btn-primary">Delete Note</a>
+                </div>
+
+
+                <div class="notecard my-2 mx-2 card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Note 1</h5>
+                    <a href="#" class="btn btn-primary">Delete Note</a>
+                </div>
+
+                 <button class="btn btn-primary">Delete Note</button>
